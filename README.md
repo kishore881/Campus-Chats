@@ -1,5 +1,6 @@
 # Campus Chats
 #### This repository is my submission for Microsoft Engage 2021 (FTO).
+#### * This repo contains the current production code for the web app. Check the below mentioned repositories for the Front End and Back End code with comments and more explanation. *
 ### Front End Repo: [Campus-Chats-FE](https://github.com/kancherlakishorereddy/Campus-Chats-FE)
 ### Back End Repo: [Campus-Chats-BE](https://github.com/kancherlakishorereddy/Campus-Chats-BE)
 ### Web App hosted at: [cc-kishore.herokuapp.com](https://cc-kishore.herokuapp.com)
