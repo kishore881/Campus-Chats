@@ -1,0 +1,31 @@
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--bs-secondary);
+    border-radius: 10px;
+}
+.site-bg{
+    background-image: url('./background.svg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.no-outline {
+    border: none !important;
+    border-width: 0;
+    background: transparent;
+}
+.no-outline:focus{
+    background: transparent;
+    box-shadow: none !important;
+}
+.navbar-nav a.active .btn-outline-light{
+    background-color: var(--bs-light);
+    color: var(--bs-primary);
+}

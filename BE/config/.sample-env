@@ -1,0 +1,7 @@
+BASE_URL=
+PORT=<port number>
+DB_URI=mongodb+srv://<username>:<password>@<cluster info>.mongodb.net/<database>?retryWrites=true&w=majority
+JWT_SECRET=
+JWT_ALGO=
+MAIL_USER=
+MAIL_PASS=
