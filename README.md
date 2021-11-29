@@ -14,6 +14,9 @@
 - #### Posts can be sorted by latest post first, expiring soon first, and can be filtered whether the search term is present in the subject, body, or the author's name.
 - #### Users Sign Up and Sign In with the Email IDs provided by their Institution.
 - #### On signing up, a confirmation mail is sent with a link to verify their ownership of the Mail ID before giving access to the platform.
+
+https://user-images.githubusercontent.com/49707819/143817694-e6f15e6f-8cbf-41eb-b4fc-78b8649f3d84.mp4
+
 ---
 ### Tech Stack:
 ![NodeJs](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white) ![express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white) ![JWTs](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=JSON%20web%20tokens&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white) ![ReactJs](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![Bootstrp](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
