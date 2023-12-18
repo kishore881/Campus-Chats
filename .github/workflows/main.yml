@@ -32,8 +32,8 @@ jobs:
       - name: Move build files
         run: |
           mkdir -p deploy/client
-          mv BE/* deploy/
-          mv FE/build deploy/client/
+          cp BE/* deploy/
+          cp FE/build deploy/client/
 
       - name: Commit and push to deploy folder
         run: |

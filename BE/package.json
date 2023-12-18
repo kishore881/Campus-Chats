@@ -1,0 +1,32 @@
+{
+  "name": "cc-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev-start": "nodemon index.js",
+    "start": "node index.js",
+    "build": "cd client && npm run build",
+    "install-client": "cd client && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build"
+  },
+  "keywords": [
+    "cc"
+  ],
+  "author": "kishore",
+  "license": "ISC",
+  "dependencies": {
+    "argon2": "^0.28.2",
+    "celebrate": "^15.0.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-jwt": "^8.4.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^6.0.12",
+    "mongoose-unique-validator": "^3.0.0",
+    "nodemailer": "^6.7.1",
+    "winston": "^3.3.3"
+  }
+}
