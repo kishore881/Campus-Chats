@@ -1,0 +1,44 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Install and build frontend
+        run: |
+          cd FE
+          npm install
+          npm run build
+          cd ..
+
+      - name: Move build files
+        run: |
+          mv BE/* .
+          mkdir -p client
+          mv FE/build client/
+          rm -r FE
+          rm -r BE
+
+      - name: Commit and push to deploy branch
+        run: |
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'github-actions@github.com'
+          git checkout deploy || git checkout -b deploy
+          git pull origin deploy || true
+          git add .
+          git commit -m "update latest build"
+          git push origin deploy
