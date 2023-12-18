@@ -21,9 +21,9 @@ module.exports = ({app, postService}) => {
         async (req, res) => {
         try {
             const {subject, post, expiry} = req.body;
-            const postRecord = await postService.createPost(req.token._id, req.token.email, subject, post, expiry);
+            const postRecord = await postService.createPost(req.auth._id, req.auth.email, subject, post, expiry);
             
-            winston.debug(`User ${req.token._id} created post ${postRecord._id}`);
+            winston.debug(`User ${req.auth._id} created post ${postRecord._id}`);
             
             res.json({message: 'Post created', post:postRecord}).end();
         } catch (err) {
@@ -42,7 +42,7 @@ module.exports = ({app, postService}) => {
 
     route.get('/getbyuser', async (req, res) => {
         try {
-            const posts = await postService.getLivePostsByUser(req.token._id);
+            const posts = await postService.getLivePostsByUser(req.auth._id);
             res.json({message: "User's Live Posts", posts}).end();
         } catch (err) {
             return res.json({status: 401, message: err.message}).end();
@@ -62,7 +62,7 @@ module.exports = ({app, postService}) => {
         try {        
             const {id, subject, post} = req.params;
             console.log(id);
-            const postRecord = await postService.updatePost({userId: req.token.id, postId: id, subject, post});
+            const postRecord = await postService.updatePost({userId: req.auth.id, postId: id, subject, post});
             return res.json({message: 'Post created', postRecord}).end();
         } catch (err) {
             return res.json({status: 401, message: err.message}).end();
@@ -72,7 +72,7 @@ module.exports = ({app, postService}) => {
     route.delete('/:id', async (req, res) => {
         try {
             const {id} = req.params;
-            const post = await postService.deletePost(req.token._id, id);
+            const post = await postService.deletePost(req.auth._id, id);
             return res.json({status: 'deleted', post});
         } catch (err) {
             return res.json({status: 401, message: err.message}).end();
