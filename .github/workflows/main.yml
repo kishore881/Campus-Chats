@@ -38,7 +38,7 @@ jobs:
           git config --global user.name 'GitHub Actions'
           git config --global user.email 'github-actions@github.com'
           git checkout deploy || git checkout -b deploy
-          git pull origin deploy || true
+          git fetch origin deploy:deploy
           git add .
           git commit -m "update latest build"
           git push origin deploy
