@@ -2,7 +2,7 @@ const nodemailer = require('nodemailer')
 const config = require('../config');
  
 const credentials = {
-  service: 'gmail',
+  service: config.mail.service,
   auth: {
     user: config.mail.id, 
     pass: config.mail.pass 
