@@ -11,7 +11,7 @@ module.exports = ({app, authService, mailService}) => {
     If not user info is extracted from token and returned*/
     route.get('/checkUser', middlewares.isAuthenticated, (req, res) => {
         try{
-            return res.json({_id: req.token._id, email: req.token.email}).end();
+            return res.json({_id: req.auth._id, email: req.auth.email}).end();
         } catch(err) {
             return res.json({status: 401, message: err.message}).end();
         }
@@ -71,7 +71,7 @@ module.exports = ({app, authService, mailService}) => {
     // clear the cookie holding JWT thus denying access when /checkuser route is called
     route.post('/signout', middlewares.isAuthenticated, (req, res, next) => {
         try {
-          winston.debug(`User ${req.token._id} Signed Out`);
+          winston.debug(`User ${req.auth._id} Signed Out`);
           return res.clearCookie('token').json({message: "logged out"}).end();
         } catch (e) {
           winston.error('🔥 error %o', e);

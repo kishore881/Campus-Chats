@@ -1,4 +1,3 @@
-const { UnauthorizedError } = require('express-jwt');
 const expressjwt = require('express-jwt');
 const config = require('../../config');
 
