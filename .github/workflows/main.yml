@@ -40,5 +40,6 @@ jobs:
           git config --global user.name 'GitHub Actions'
           git config --global user.email 'github-actions@github.com'
           git add .
+          git reset -- deploy/README.md
           git commit -m "update latest build"
           git push
