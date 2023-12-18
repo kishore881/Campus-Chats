@@ -2,12 +2,13 @@ const nodemailer = require('nodemailer')
 const config = require('../config');
  
 const credentials = {
-  service: config.mail.service,
+  host: config.mail.host,
+  port: config.mail.port,
   auth: {
-    user: config.mail.id, 
-    pass: config.mail.pass 
+    user: config.mail.id,
+    pass: config.mail.pass
   },
-  tls : { rejectUnauthorized: false }
+  tls: { rejectUnauthorized: false, ciphers: 'SSLv3' }
 }
 
 const transporter = nodemailer.createTransport(credentials);
