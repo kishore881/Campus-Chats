@@ -3,9 +3,11 @@ const dotenv = require('dotenv');
 // setting env to dev if no NODE_ENV env variable found
 process.env.NODE_ENV = process.env.NODE_ENV || 'dev';
 
-const envFound = dotenv.config({path: 'config/.env'});
-if(envFound.error){
-    throw new Error("⚠️ .env file not found ⚠️");
+if(process.env.NODE_ENV === 'dev'){
+    const envFound = dotenv.config({path: 'config/.env'});
+    if(envFound.error){
+        throw new Error("⚠️ .env file not found ⚠️");
+    }
 }
 
 // processing the environment variables into config object which is accessed throughout the application
