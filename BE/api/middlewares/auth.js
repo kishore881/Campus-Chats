@@ -7,9 +7,12 @@ const getTokenfromCookie = (req) => {
     return token;
 }
 
-const checkRevoked = (req, token, done) => {
-    let invalid = (new Date(token.expiresAt).getTime() < new Date().getTime());
-    return done(null, invalid);
+const checkRevoked = (req, token) => {
+    try {
+        return (new Date(token.expiresAt).getTime() >= new Date().getTime());
+    } catch (err) {
+        return false;
+    }
 }
 
 const isAuthenticated = expressjwt.expressjwt({
@@ -21,4 +24,4 @@ const isAuthenticated = expressjwt.expressjwt({
     userProperty: 'token',
 });
 
-module.exports = {isAuthenticated}
+module.exports = { isAuthenticated }
