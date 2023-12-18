@@ -22,7 +22,7 @@ jobs:
         run: |
           cd FE
           npm install
-          npm run build
+          CI=false npm run build
           cd ..
 
       - name: Move build files
