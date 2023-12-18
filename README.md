@@ -1,11 +1,11 @@
 ## Campus Chats
 #### This repository is my submission for Microsoft Engage 2021 (FTO).
 ### Dev
-#### [Front End (Campus-Chats/FE)](https://github.com/kancherlakishorereddy/Campus-Chats/FE): React + Axios + Bootstrap dev code
-#### [Back End (Campus-Chats/BE)](https://github.com/kancherlakishorereddy/Campus-Chats/BE): Node + Express + MongDB dev code
+#### [Front End (Campus-Chats/FE)](https://github.com/kishore881/Campus-Chats/FE): React + Axios + Bootstrap dev code
+#### [Back End (Campus-Chats/BE)](https://github.com/kishore881/Campus-Chats/BE): Node + Express + MongDB dev code
 ### Prod
-#### [Deployment (Campus-Chats/prod)](https://github.com/kancherlakishorereddy/Campus-Chats/BE): Code currently deployed on Heroku
-#### Web App @ [cc-kishore.herokuapp.com](https://cc-kishore.herokuapp.com)
+#### [Deployment (Campus-Chats/prod)](https://github.com/kishore881/Campus-Chats/deploy): Code currently deployed
+#### Web App @ [campus-chats.onrender.com](https://campus-chats.onrender.com)
 ---
 #### Campus Chats is a micro announcements platform for internal use in Universities. The platform acts as a noticeboard where people of an institution can share any online/offline happenings for others to know about and join in.
 #### Campus Chats currently supports the following features:
