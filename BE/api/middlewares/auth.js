@@ -12,7 +12,7 @@ const checkRevoked = (req, token, done) => {
     return done(null, invalid);
 }
 
-const isAuthenticated = expressjwt({
+const isAuthenticated = expressjwt.expressjwt({
     secret: config.jwtSecret,
     algorithms: [config.jwtAlgo],
     credentialsRequired: true,
