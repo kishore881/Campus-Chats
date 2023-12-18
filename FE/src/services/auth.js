@@ -1,4 +1,4 @@
-const axios = require('axios').default;
+import axios from 'axios';
 
 /*
     configures axios to intercept every response from server and verify if the JWT has expired and response is returned as it is.

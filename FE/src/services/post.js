@@ -1,4 +1,4 @@
-const axios = require('axios').default;
+import axios from 'axios';
 
 // gets all posts which are currently not expired yet (live posts)
 export const getPosts = async () => {
